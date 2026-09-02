@@ -3,8 +3,8 @@ from rest_framework import viewsets
 from .models import Order, OrderItem
 from .serializer import OrderSerializer, OrderItemSerializer
 
-class OrederViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.prefetch_related("items")
     serializer_class = OrderSerializer
 
 class OrderItemViewSet(viewsets.ModelViewSet):
