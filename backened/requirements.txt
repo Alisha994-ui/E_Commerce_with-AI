@@ -1,0 +1,11 @@
+Django>=6.1
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+python-decouple
+psycopg2-binary
+Pillow
+requests
+scikit-learn
+transformers
+torch

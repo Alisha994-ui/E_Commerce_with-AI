@@ -1,0 +1,157 @@
+.admin-navbar {
+  width: 100%;
+  background: var(--ink);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 70px;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGO */
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.admin-logo-icon {
+  font-size: 26px;
+}
+
+.admin-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* NAVIGATION */
+
+.admin-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.admin-nav-link {
+  border: none;
+  background: transparent;
+  color: var(--line-strong);
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.admin-nav-link:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.admin-nav-link.active {
+  background: white;
+  color: var(--ink);
+}
+
+
+/* RIGHT SIDE */
+
+.admin-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-label {
+  font-size: 14px;
+  color: var(--line);
+  white-space: nowrap;
+}
+.admin-home-button {
+  border: 1px solid var(--ink-2);
+  background: transparent;
+  color: white;
+  padding: 9px 15px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.admin-home-button:hover {
+  background: white;
+  color: var(--ink);
+}
+
+.admin-logout-button {
+  border: 1px solid var(--ink-2);
+  background: transparent;
+  color: white;
+  padding: 9px 15px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-logout-button:hover {
+  background: white;
+  color: var(--ink);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .admin-nav-container {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .admin-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .admin-nav-actions {
+    margin-left: auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .admin-logo-text {
+    font-size: 17px;
+  }
+
+  .admin-label {
+    display: none;
+  }
+
+  .admin-nav-link {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+}
